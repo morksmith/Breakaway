@@ -108,8 +108,11 @@ public class PlayerControl : MonoBehaviour
         if (collision.transform.tag == "Fish")
         {
             if(Hatted && Rodded)
-            Audio.PlayOneShot(PowerupSound);
-            SceneManager.LoadScene(1);
+            {
+                Audio.PlayOneShot(PowerupSound);
+                SceneManager.LoadScene(1);
+            }
+            
         }
         if (collision.transform.tag == "Bomb")
         {

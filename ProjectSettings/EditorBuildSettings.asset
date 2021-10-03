@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fishing.unity
     guid: f57d67a759aa99e44bb350c531be572b
+  - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: ce8d557c11b7cc24f8f2224c0abf4a70
+  - enabled: 1
+    path: Assets/Scenes/sin.unity
+    guid: 9b6842d66a423704888ee9fe07e47fd9
   m_configObjects: {}

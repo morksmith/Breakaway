@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectsToSpawn:
   - {fileID: 8352561352084220465, guid: 8922be8d824345346becc48d1a98304b, type: 3}
-  SpawnFrequency: 60
+  SpawnFrequency: 40
   LevelWidth: 5
   IncreaseOverTime: 0
 --- !u!4 &935102179

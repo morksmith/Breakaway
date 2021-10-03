@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Hook : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Hook : MonoBehaviour
     public bool Hooked = false;
     public TextMeshProUGUI MoneyText;
     public float Money = 0;
-
+    public GameObject KingFish;
     public Fish CaughtFish;
 
     private void Start()
@@ -23,10 +24,15 @@ public class Hook : MonoBehaviour
             if (Hooked)
             {
                 Money += 5 * CaughtFish.Size;
+                Boat.Audio.PlayOneShot(Boat.CollectSound);
                 MoneyText.text = "$" + Mathf.Round(Money);
                 Destroy(CaughtFish.gameObject);
                 Hooked = false;
             }
+        }
+        if(Money >= 100)
+        {
+            KingFish.SetActive(true);
         }
     }
 

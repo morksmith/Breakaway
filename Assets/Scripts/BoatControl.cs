@@ -12,6 +12,8 @@ public class BoatControl : MonoBehaviour
     public float HookPosition;
     private float xPos;
     public float CastLength;
+    public AudioSource Audio;
+    public AudioClip CollectSound;
 
     private float hookStartPos;
     public enum FishState

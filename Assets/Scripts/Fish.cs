@@ -7,6 +7,8 @@ public class Fish : MonoBehaviour
     public float MoveSpeed;
     public float Size;
     public bool Caught = false;
+    public float LifeTime = 20;
+    private float timer;
     void Start()
     {
         Size = Random.Range(0.25f, 1.2f);
@@ -17,9 +19,15 @@ public class Fish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!Caught)
         {
+            timer += Time.deltaTime;
             transform.position += new Vector3(MoveSpeed * Time.deltaTime, 0, 0);
+            if(timer > LifeTime)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
